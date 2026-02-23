@@ -1,36 +1,68 @@
-<div class="tabs">
-    <a href="index.html" class="tab">📅 Plan</a>
-    <a href="routes.html" class="tab active">🗺️ Routes</a>
-    <a href="budget.html" class="tab">💰 Budget</a>
-    <a href="tips.html" class="tab">💡 Tips</a>
-</div>
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lanka Bus Trip - Routes & Spots</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lion: #8B0000; --gold: #F5A623; --green: #1A6B3C;
+  --sky: #1E90FF; --cream: #FFF8F0; --dark: #1A1A2E;
+}
 
-<div class="content">
-    <div class="sec-title">🗺️ Main Bus Routes (ප්‍රධාන බස් මාර්ග)</div>
-    
-    <div class="route-card">
-        <div class="route-header">
-            <div class="route-name">Colombo ↔ Kandy</div>
-            <span class="rbadge bc">Intercity / AC</span>
-        </div>
-        <div class="stops">
-            <div class="stop"><div class="sd"></div>Colombo<div class="sl"></div></div>
-            <div class="stop"><div class="sd" style="background:#888"></div>Kegalle<div class="sl"></div></div>
-            <div class="stop"><div class="sd"></div>Kandy</div>
-        </div>
-        <div class="rinfo">
-            <div class="ri"><div class="rl">Time</div><div class="rv">3 - 3.5 hrs</div></div>
-            <div class="ri"><div class="rl">Bus No</div><div class="rv">01 / 17</div></div>
-            <div class="ri"><div class="rl">Fare</div><div class="rv">Rs. 250 - 600</div></div>
-        </div>
-    </div>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <div class="route-card" style="border-left-color:var(--green)">
-        <div class="route-header">
-            <div class="route-name">Colombo ↔ Galle / Matara</div>
-            <span class="rbadge bs">Highway / Normal</span>
-        </div>
-        <div class="stops">
-            <div class="stop"><div class="sd" style="background:var(--green)"></div>Colombo<div class="sl"></div></div>
-            <div class="stop"><div class="sd" style="background:#888"></div>Hikkaduwa<div class="sl"></div></div>
-            <div class="stop"><div class="sd" style="background:var(--green)"></div>Galle</div>
+body { font-family: 'Poppins', sans-serif; background: var(--cream); color: var(--dark); overflow-x: hidden; }
+
+/* පිටුවට එනකොට ලස්සනට පේන්න Animation එක */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header එක දියුණු කළ ආකාරය */
+.header {
+    background: linear-gradient(135deg, #8B0000, #C0392B);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.flag-bar { display: flex; gap: 4px; position: absolute; top: 0; left: 0; width: 100%; }
+.fs { height: 6px; }
+
+.header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.header p { font-size: 13px; opacity: 0.9; }
+
+/* Tabs Navigation */
+.tabs {
+    display: flex; background: white; border-bottom: 2px solid #eee; 
+    position: sticky; top: 0; z-index: 1000; overflow-x: auto;
+}
+.tab {
+    padding: 15px 20px; font-size: 13px; font-weight: 600; color: #999;
+    text-decoration: none; border-bottom: 3px solid transparent; transition: all 0.3s;
+    white-space: nowrap; flex: 1; text-align: center;
+}
+.tab:hover { background: #fff0f0; color: var(--lion); }
+.tab.active { color: var(--lion); border-bottom-color: var(--lion); background: #fff0f0; }
+
+.content { 
+    padding: 25px 15px; max-width: 800px; margin: 0 auto; 
+    animation: fadeInUp 0.8s ease-out; /* මුළු content එකම Animation එකෙන් එන්නේ */
+}
+
+.sec-title { 
+    font-size: 18px; font-weight: 700; margin: 25px 0 15px; 
+    display: flex; align-items: center; gap: 10px; color: var(--lion);
+}
+
+/* Route Cards */
+.route-card {
+    background: white; border-radius: 16px; padding: 20px; margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--
