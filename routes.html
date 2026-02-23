@@ -1,10 +1,36 @@
 <div class="tabs">
-    <a href="index.html" class="tab">📅 Plan & Budget</a>
+    <a href="index.html" class="tab">📅 Plan</a>
     <a href="routes.html" class="tab active">🗺️ Routes</a>
+    <a href="budget.html" class="tab">💰 Budget</a>
     <a href="tips.html" class="tab">💡 Tips</a>
 </div>
 
 <div class="content">
-    <div class="sec-title">🗺️ Main Bus Routes</div>
-    <div class="sec-title">📍 Must-See Spots</div>
+    <div class="sec-title">🗺️ Main Bus Routes (ප්‍රධාන බස් මාර්ග)</div>
+    
+    <div class="route-card">
+        <div class="route-header">
+            <div class="route-name">Colombo ↔ Kandy</div>
+            <span class="rbadge bc">Intercity / AC</span>
+        </div>
+        <div class="stops">
+            <div class="stop"><div class="sd"></div>Colombo<div class="sl"></div></div>
+            <div class="stop"><div class="sd" style="background:#888"></div>Kegalle<div class="sl"></div></div>
+            <div class="stop"><div class="sd"></div>Kandy</div>
+        </div>
+        <div class="rinfo">
+            <div class="ri"><div class="rl">Time</div><div class="rv">3 - 3.5 hrs</div></div>
+            <div class="ri"><div class="rl">Bus No</div><div class="rv">01 / 17</div></div>
+            <div class="ri"><div class="rl">Fare</div><div class="rv">Rs. 250 - 600</div></div>
+        </div>
     </div>
+
+    <div class="route-card" style="border-left-color:var(--green)">
+        <div class="route-header">
+            <div class="route-name">Colombo ↔ Galle / Matara</div>
+            <span class="rbadge bs">Highway / Normal</span>
+        </div>
+        <div class="stops">
+            <div class="stop"><div class="sd" style="background:var(--green)"></div>Colombo<div class="sl"></div></div>
+            <div class="stop"><div class="sd" style="background:#888"></div>Hikkaduwa<div class="sl"></div></div>
+            <div class="stop"><div class="sd" style="background:var(--green)"></div>Galle</div>
